@@ -3,6 +3,15 @@ import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 const Register = () => {
+const handleRegister = (e) => {
+e.preventDefault()
+const name = e.target.name.value
+const email = e.target.email.value
+const photo = e.target.photo.value
+const password = e.target.password.value
+const confirmpassword = e.target.confirmpassword.value
+console.log(name, email, password, confirmpassword);
+};
     return (
     
             <div className="hero min-h-screen bg-base-200">
@@ -12,12 +21,12 @@ const Register = () => {
       
     </div>
     <div className="shadow-2xl bg-base-100">
-      <form className="card-body">
+      <form onSubmit={handleRegister} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="text" placeholder="name" className="input input-bordered" required />
+          <input name= "name" type="text" placeholder="name" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
@@ -48,7 +57,7 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Register</button>
+          <button name = "submit"className="btn btn-primary">Register</button>
           <div>
         <div className="text-blue-600 flex justify-center items-center border-2 border-blue-500 rounded-md my-4">
           <FaGoogle />
