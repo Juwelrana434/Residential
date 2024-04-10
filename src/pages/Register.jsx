@@ -23,25 +23,32 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" className="input input-bordered" required />
+          <input name='email' type="email" placeholder="email" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Photo</span>
           </label>
-          <input type="" placeholder="photo" className="input input-bordered" required />
+          <input name='photo' type="" placeholder="photo" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" className="input input-bordered" required />
+          <input name='password' type="password" placeholder="password" className="input input-bordered" required />
+          
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Confirm Password</span>
+          </label>
+          <input name='confirmpassword' type="password" placeholder="confirmpassword" className="input input-bordered" required />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Sing In</button>
+          <button className="btn btn-primary">Register</button>
           <div>
         <div className="text-blue-600 flex justify-center items-center border-2 border-blue-500 rounded-md my-4">
           <FaGoogle />
