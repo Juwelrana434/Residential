@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
 
 const Register = () => {
+const {registerUser} = useContext(AuthContext)
 const handleRegister = (e) => {
 e.preventDefault()
 const name = e.target.name.value
@@ -10,7 +13,8 @@ const email = e.target.email.value
 const photo = e.target.photo.value
 const password = e.target.password.value
 const confirmpassword = e.target.confirmpassword.value
-console.log(name, email, password, confirmpassword);
+console.log(name, email, photo, password, confirmpassword);
+registerUser(email, password)
 };
     return (
     
@@ -57,7 +61,7 @@ console.log(name, email, password, confirmpassword);
           </label>
         </div>
         <div className="form-control mt-6">
-          <button name = "submit"className="btn btn-primary">Register</button>
+          <button name = "submit" type= "submit" className="btn btn-primary">Register</button>
           <div>
         <div className="text-blue-600 flex justify-center items-center border-2 border-blue-500 rounded-md my-4">
           <FaGoogle />

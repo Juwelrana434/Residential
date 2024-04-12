@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
 
 const Login = () => {
+const {loginUser} = useContext(AuthContext)
   const handleLogin = (e) => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
     console.log(email, password)
+    loginUser(email, password)
     };
     return (
     
@@ -35,7 +39,7 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button type = "submit" className="btn btn-primary">Login</button>
           <div>
         <div className="text-blue-600 flex justify-center items-center border-2 border-blue-500 rounded-md my-4">
           <FaGoogle />
