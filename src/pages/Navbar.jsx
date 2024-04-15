@@ -1,18 +1,22 @@
 import {NavLink} from 'react-router-dom'
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdHome } from "react-icons/io";
+import { useContext } from 'react';
+import { AuthContext } from '../FirebaseAuthProvider/FirebaseProvider';
 
 const Navbar = () => {
+const {user, logOut} = useContext(AuthContext)
+console.log(user);
 const navlink = <>
  <li><NavLink to='/'>Home</NavLink></li>
  <li><NavLink to='/about'>Rent</NavLink></li>
- <li><NavLink to='/career'>Manage property</NavLink></li>
+ <li><NavLink to='/estate'>Up Coming</NavLink></li>
  <li><NavLink to='/career'>Update Profile </NavLink></li>
  <li><NavLink to='/career'>About</NavLink></li>
 </>
     return (
-    <div className=''>
-        <div className="navbar bg-base-100 border-b-2 border-gray-100 rounded-md shadow-lg">
+    <div className='h-20 max-w-[1270px] mx-auto'>
+        <div className="navbar border-b-2 border-gray-100 rounded-md shadow-lg text-black font-bold fixed z-10 h-20 max-w-[1270px] mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,7 +42,12 @@ const navlink = <>
     <NavLink to='/login'><button className='btn sm:m-0'>Login</button></NavLink>
     <NavLink to='/register'><button className='btn ml-2'>Register</button></NavLink>
     <div className="rounded-full flex">
-        <FaRegUserCircle className='lg:text-3xl text-xl md:ml-2 md:text-2xl' />
+    {user ? <div>
+    {user.email}
+    <button onClick={()=>logOut()}>Log Out</button>
+    
+    </div>:""}
+        <FaRegUserCircle className='lg:text-3xl text-xl md:ml-2 md:text-2xl text-black' />
           {/* <img alt="Tailwind CSS Navbar component" src={userpic} /> */}
         </div>
   </div>

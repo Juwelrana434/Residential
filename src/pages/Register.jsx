@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-const {registerUser} = useContext(AuthContext)
+const {registerUser, setUser} = useContext(AuthContext)
+const [error, setError] = useState("")
 const handleRegister = (e) => {
 e.preventDefault()
 const name = e.target.name.value
@@ -13,19 +16,45 @@ const email = e.target.email.value
 const photo = e.target.photo.value
 const password = e.target.password.value
 const confirmpassword = e.target.confirmpassword.value
-console.log(name, email, photo, password, confirmpassword);
+
+if(password.length<6){
+  setError("Password must be at least 6 characters")
+  return}
+
+  if(!/^(?=.*[A-Z]).*$/
+  .test(password)){
+  setError("Must have an Uppercase letter in the password")
+  return
+  }
+  if(!/^(?=.*[a-z]).*$/
+  .test(password)){
+  setError("Must have an Lowercase letter in the password")
+  return
+  }
+  
+  if(password !== confirmpassword){
+    setError("Passwords do not match")
+    return
+    }
+
+  
+ 
+// console.log(name, email, photo, password, confirmpassword);
 registerUser(email, password)
+.then(result=>{setUser(result.user)})
+.catch(error=>setError(error.message.split('/')[1]))
+setError("registration successfully")
 };
     return (
     
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col">
     <div className="text-center">
-      <h1 className="lg:text-5xl text-xl font-bold text-center">Please Register</h1>
+      <h1 className="lg:text-3xl text-xl font-bold text-center">Please Register</h1>
       
     </div>
     <div className="shadow-2xl bg-base-100">
-      <form onSubmit={handleRegister} className="card-body">
+      <form onSubmit={handleRegister} className="m-4">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
@@ -59,6 +88,9 @@ registerUser(email, password)
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
+        {
+        
+        error && <p className="text-red-500">{error}</p>}
         </div>
         <div className="form-control mt-6">
           <button name = "submit" type= "submit" className="btn btn-primary">Register</button>

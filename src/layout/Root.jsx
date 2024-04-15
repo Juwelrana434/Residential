@@ -5,12 +5,12 @@ import Footer from './../pages/Footer';
 
 
 
+
 const Root = () => {
     return (
         <div>
         <Navbar></Navbar>
             <Outlet></Outlet>
-            
             <Footer></Footer>
             
         </div>

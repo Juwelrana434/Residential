@@ -2,7 +2,8 @@
 
 const Footer = () => {
     return (
-        <div className="text-white bg-black">
+    <div>
+        <div className="text-white bg-black my-4">
             <footer className="footer p-10 grid-cols-2">
   <nav>
     <h6 className="footer-title">Services</h6> 
@@ -27,6 +28,8 @@ const Footer = () => {
     </div>
   </nav>
 </footer>
+        </div>
+        <h1 className="text-center text-black mb-4">Copyright © 2024. All rights reserved.</h1>
         </div>
     );
 };

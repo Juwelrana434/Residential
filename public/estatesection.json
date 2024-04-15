@@ -2,10 +2,10 @@
     {
         "property": {
           "id": "1001",
-          "estate_title": "Beautiful Family Home in Suburban Area",
-          "segment_name": "Residential",
+          "estate_title": "Beautiful Family Home",
+          "segment_name": "Single-family homes",
           "description": "This spacious and elegant family home is located in a quiet suburban neighborhood. It features 4 bedrooms, 3 bathrooms, a large backyard, and modern amenities throughout. Perfect for families looking for comfort and convenience.",
-          "price": "$500,000",
+          "price": "$500,000/Yearly",
           "status": "sale",
           "image_url": "https://thumbor.forbes.com/thumbor/fit-in/1290x/https://www.forbes.com/advisor/wp-content/uploads/2022/10/what-is-single-family-home.jpeg.jpg",
           "location": {
@@ -32,11 +32,11 @@
         "property": {
           "id": "1002",
           "estate_title": "Cozy Apartment in Downtown",
-          "segment_name": "Residential",
+          "segment_name": "townhouses",
           "description": "A charming one-bedroom apartment located in the heart of the city. Close to shops, restaurants, and public transportation.",
-          "price": "$300,000",
+          "price": "$300,000?/yearly",
           "status": "sale",
-          "image_url": "https://example.com/apartment-image.jpg",
+          "image_url": "https://s3.amazonaws.com/homelink/media/images/listingsrescale_stage/610_385/618d342173e08_958_508.jpg",
           "location": {
             "city": "Metropolis",
             "state": "California",
@@ -48,18 +48,23 @@
             "bedrooms": 1,
             "bathrooms": 1
           },
-          "features": ["Balcony", "Hardwood floors", "Granite countertype","Modern kitchen", "Walk-in closets" ]
+          "features": ["Balcony", "Hardwood floors", "Granite countertype","Modern kitchen", "Walk-in closets" ],
+          "contact": {
+            "agent_name": "John Doe",
+            "agent_email": "johndoe@example.com",
+            "agent_phone": "+1 (123) 456-7890"
         }
-      },
+      }
+    },
       {
         "property": {
           "id": "1003",
-          "estate_title": "Modern Townhouse with Stunning Views",
-          "segment_name": "Residential",
+          "estate_title": "Modern Townhouse Stunning Views",
+          "segment_name": "apartments",
           "description": "A contemporary townhouse featuring panoramic views of the surrounding mountains. Spacious living areas and high-end finishes throughout.",
-          "price": "$600,000",
+          "price": "$600,000/Yearly",
           "status": "sale",
-          "image_url": "https://example.com/townhouse-image.jpg",
+          "image_url": "https://media.istockphoto.com/id/1393538022/photo/modern-townhouse-design.jpg?s=1024x1024&w=is&k=20&c=JzGhmZqqTSBjwWoGl0vYOkx5TQJg4jghXgGZDhqKXKI=",
           "location": {
             "city": "Mountainview",
             "state": "Colorado",
@@ -72,18 +77,23 @@
             "bathrooms": 2.5,
             "garage": 2
           },
-          "features": ["Modern kitchen", "Deck", "Walk-in closets", "Fireplace"]
+          "features": ["Modern kitchen", "Deck", "Walk-in closets", "Fireplace"],
+          "contact": {
+            "agent_name": "John Doe",
+            "agent_email": "johndoe@example.com",
+            "agent_phone": "+1 (123) 456-7890"
+        }
         }
       },
       {
         "property": {
           "id": "1004",
-          "estate_title": "Spacious Family Home with Pool",
-          "segment_name": "Residential",
+          "estate_title": "Spacious student housing ",
+          "segment_name": "student housing",
           "description": "A beautiful family home with a large backyard and swimming pool. Ideal for entertaining guests and enjoying outdoor activities.",
-          "price": "$800,000",
+          "price": "$800,00/Yearly",
           "status": "sale",
-          "image_url": "https://example.com/family-home-image.jpg",
+          "image_url": "https://www.chapman.edu/students/new-students/_files/new-student-housing-masthead.jpg",
           "location": {
             "city": "Sunnyvale",
             "state": "California",
@@ -97,18 +107,23 @@
             "garage": 2,
             "lot_size_acres": 0.5
           },
-          "features": ["Swimming pool", "Spa", "Gourmet kitchen", "Home theater"]
+          "features": ["Swimming pool", "Spa", "Gourmet kitchen", "Home theater"],
+          "contact": {
+            "agent_name": "John Doe",
+            "agent_email": "johndoe@example.com",
+            "agent_phone": "+1 (123) 456-7890"
+        }
         }
       },
       {
         "property": {
           "id": "1005",
-          "estate_title": "Luxurious Penthouse with Skyline Views",
-          "segment_name": "Residential",
+          "estate_title": "Luxurious senior living communities ",
+          "segment_name": "living communities",
           "description": "A stunning penthouse apartment offering breathtaking views of the city skyline. Elegant design, spacious rooms, and top-of-the-line amenities.",
-          "price": "$1,200,000",
+          "price": "$1,200,00/Yearly",
           "status": "sale",
-          "image_url": "https://example.com/penthouse-image.jpg",
+          "image_url": "https://www.track2realty.track2media.com/wp-content/uploads/2016/02/Senior-Housing.jpg",
           "location": {
             "city": "Metroville",
             "state": "New York",
@@ -121,18 +136,23 @@
             "bathrooms": 3.5,
             "garage": 2
           },
-          "features": ["Floor-to-ceiling windows", "Private terrace", "Gourmet kitchen", "Spa-like bathrooms"]
+          "features": ["Floor-to-ceiling windows", "Private terrace", "Gourmet kitchen", "Spa-like bathrooms"],
+          "contact": {
+            "agent_name": "John Doe",
+            "agent_email": "johndoe@example.com",
+            "agent_phone": "+1 (123) 456-7890"
+        }
         }
       },
       {
         "property": {
           "id": "1006",
           "estate_title": "Rural Retreat with Acreage",
-          "segment_name": "Residential",
+          "segment_name": "vacation",
           "description": "A peaceful retreat set on acres of pristine countryside. Perfect for those seeking privacy and tranquility.",
-          "price": "$700,000",
-          "status": "sale",
-          "image_url": "https://example.com/rural-retreat-image.jpg",
+          "price": "$700,00 /Week",
+          "status": "Rent",
+          "image_url": "https://blog.ssb-cpa.com/hubfs/033122%20Vacation%20home.jpg",
           "location": {
             "city": "Meadowville",
             "state": "Montana",
@@ -146,7 +166,12 @@
             "garage": 2,
             "lot_size_acres": 5
           },
-          "features": ["Wrap-around porch", "Pond", "Barn", "Hiking trails"]
+          "features": ["Wrap-around porch", "Pond", "Barn", "Hiking trails"],
+          "contact": {
+            "agent_name": "John Doe",
+            "agent_email": "johndoe@example.com",
+            "agent_phone": "+1 (123) 456-7890"
+        }
         }
       },
       {
@@ -155,9 +180,9 @@
           "estate_title": "Contemporary Loft in Urban Setting",
           "segment_name": "Residential",
           "description": "A sleek and stylish loft apartment located in a vibrant urban neighborhood. Industrial-chic design with exposed brick walls and high ceilings.",
-          "price": "$450,000",
-          "status": "sale",
-          "image_url": "https://example.com/loft-image.jpg",
+          "price": "$450,000/yearly",
+          "status": "Rent",
+          "image_url": "https://cdn.houseplansservices.com/content/r2vk5u3uo9t3pmge3s2g6mf32k/w991x660.jpg?v=9",
           "location": {
             "city": "Cityscape",
             "state": "Illinois",
@@ -169,7 +194,12 @@
             "bedrooms": 2,
             "bathrooms": 2
           },
-          "features": ["Open floor plan", "Stainless steel appliances", "Lofted bedroom"]
+          "features": ["Open floor plan", "Stainless steel appliances", "Lofted bedroom"],
+          "contact": {
+            "agent_name": "John Doe",
+            "agent_email": "johndoe@example.com",
+            "agent_phone": "+1 (123) 456-7890"
+        }
         }
       },
       {
@@ -178,9 +208,9 @@
           "estate_title": "Historic Victorian Mansion",
           "segment_name": "Residential",
           "description": "An exquisite Victorian mansion meticulously restored to its former glory. Grandeur and elegance define this architectural masterpiece.",
-          "price": "$2,500,000",
+          "price": "$2,500,000/yearly",
           "status": "sale",
-          "image_url": "https://example.com/mansion-image.jpg",
+          "image_url": "https://www.homestratosphere.com/wp-content/uploads/2018/09/victorian-mansion-oct062022.jpg",
           "location": {
             "city": "Old Town",
             "state": "Massachusetts",
@@ -194,7 +224,12 @@
             "garage": 3,
             "lot_size_acres": 1.5
           },
-          "features": ["Wrap-around veranda", "Original woodwork", "Formal gardens", "Library", "Ballroom"]
+          "features": ["Wrap-around veranda", "Original woodwork", "Formal gardens", "Library", "Ballroom"],
+          "contact": {
+            "agent_name": "John Doe",
+            "agent_email": "johndoe@example.com",
+            "agent_phone": "+1 (123) 456-7890"
+        }
         }
       },
       {
@@ -203,9 +238,9 @@
           "estate_title": "Mountain Retreat Cabin",
           "segment_name": "Residential",
           "description": "A cozy cabin nestled in the mountains offering spectacular views of nature. Perfect for outdoor enthusiasts and nature lovers.",
-          "price": "$350,000",
-          "status": "sale",
-          "image_url": "https://example.com/cabin-image.jpg",
+          "price": "$350,00/Month",
+          "status": "Rent",
+          "image_url": "https://images.mansionglobal.com/im-524188?width=784&size=1.7802503477051461",
           "location": {
             "city": "Mountaintop",
             "state": "Colorado",
@@ -218,32 +253,13 @@
             "bathrooms": 1,
             "lot_size_acres": 0.75
           },
-          "features": ["Rustic interior", "Deck", "Fire pit", "Hiking trails nearby"]
+          "features": ["Rustic interior", "Deck", "Fire pit", "Hiking trails nearby"],
+          "contact": {
+            "agent_name": "John Doe",
+            "agent_email": "johndoe@example.com",
+            "agent_phone": "+1 (123) 456-7890"
         }
-      },
-      {
-        "property": {
-          "id": "1010",
-          "estate_title": "Family-Friendly Suburban Home",
-          "segment_name": "Residential",
-          "description": "A comfortable suburban home perfect for families. Close to schools, parks, and amenities.",
-          "price": "$550,000",
-          "status": "sale",
-          "image_url": "https://example.com/suburban-home-image.jpg",
-          "location": {
-            "city": "Suburbia",
-            "state": "Texas",
-            "country": "United States",
-            "zipcode": "98765"
-          },
-          "area": {
-            "total_sqft": 2200,
-            "bedrooms": 4,
-            "bathrooms": 2.5,
-            "garage": 2,
-            "lot_size_acres": 0.3
-          },
-          "features": ["Large backyard", "Playground", "Modern kitchen", "Master suite"]
         }
-      }       
+      }
+      
 ]

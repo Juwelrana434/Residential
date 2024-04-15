@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import PropertyDetails from "../pages/PropertyDetails";
 import Error from './../Error/Error';
 
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -28,10 +29,12 @@ const router = createBrowserRouter([
 
         },
       {
-        path:'/property/:property.id',
-        element: <PropertyDetails></PropertyDetails>
+        path:'/property/:id',
+        element: <PropertyDetails></PropertyDetails>,
+        // loader: () => fetch('../../public/estatesection.json'),
 
         },
+       
       ]
     },
   ]);
