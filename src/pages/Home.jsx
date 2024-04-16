@@ -24,7 +24,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setProperties(data));
   }, []);
-  console.log(properties);
+  // console.log(properties);
   return (
     <div>
       <div className="lg:min-h-[calc(100vh - 450px)] mx-4">

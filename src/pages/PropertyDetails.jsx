@@ -11,13 +11,13 @@ const PropertyDetails = () => {
       .then((data) => setDetails(data));
   }, []);
 
-  console.log(details);
+  // console.log(details);
 
   const { id } = useParams();
   const idInt = parseInt(id);
   console.log(idInt);
   const detail = details.find((detail) => detail.property.id == idInt);
-  console.log(detail);
+  // console.log(detail);
   // setEstateDetails(detail);
   // console.log(estateDetails);
 

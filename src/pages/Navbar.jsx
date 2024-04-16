@@ -43,7 +43,9 @@ const navlink = <>
     <NavLink to='/register'><button className='btn ml-2'>Register</button></NavLink>
     <div className="rounded-full flex">
     {user ? <div>
-    {user.email}
+    {user.displayName
+
+}
     <button onClick={()=>logOut()}>Log Out</button>
     
     </div>:""}
