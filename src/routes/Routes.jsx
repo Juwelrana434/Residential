@@ -5,6 +5,8 @@ import Login from './../pages/Login';
 import Register from "../pages/Register";
 import PropertyDetails from "../pages/PropertyDetails";
 import Error from './../Error/Error';
+import About from "../About/About";
+// import Upcoming from "../pages/Upcoming";
 
 
 const router = createBrowserRouter([
@@ -29,11 +31,21 @@ const router = createBrowserRouter([
 
         },
       {
+        path:'/about',
+        element: <About></About>
+
+        },
+      {
         path:'/property/:id',
         element: <PropertyDetails></PropertyDetails>,
         // loader: () => fetch('../../public/estatesection.json'),
 
         },
+        // {
+        //   path:'/upcoming',
+        //   element: <Upcoming></Upcoming>
+  
+        //   },
        
       ]
     },

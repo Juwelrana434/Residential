@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
 import Home5 from "../../src/assets/Home5.jpg";
 
+
 const Login = () => {
 const {loginUser, googleLogin, setUser, gitHubLogin} = useContext(AuthContext)
   const handleLogin = (e) => {
@@ -22,6 +23,7 @@ const {loginUser, googleLogin, setUser, gitHubLogin} = useContext(AuthContext)
     gitHubLogin()
     .then(result => setUser(result.user))
     }
+    
     return (
     <div className="" style={{backgroundImage: `url(${Home5})`}}>
             <div className="hero min-h-screen bg-base-200 my-4">

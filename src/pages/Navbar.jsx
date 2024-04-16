@@ -13,22 +13,22 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/about">Rent</NavLink>
+        <NavLink to="/emty">Rent</NavLink>
       </li>
       <li>
-        <NavLink to="/estate">Up Coming</NavLink>
+        <NavLink to="/upcoming">Up Coming</NavLink>
       </li>
       <li>
         <NavLink to="/career">Update Profile </NavLink>
       </li>
-      <li>
-        <NavLink to="/career">About</NavLink>
-      </li>
+      {user && <li>
+        <NavLink to="/about">About</NavLink>
+      </li>}
     </>
   );
   return (
-    <div className="h-20 max-w-[1270px] mx-auto">
-      <div className="navbar border-b-2 border-gray-100 rounded-md shadow-lg text-black font-bold fixed z-10 h-20 max-w-[1270px] mx-auto">
+    <div className="h-24 max-w-[1270px] mx-auto">
+      <div className="navbar border-b-2 border-gray-100 rounded-md shadow-lg text-black font-bold fixed z-10 h-24 max-w-[1270px] mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -78,9 +78,10 @@ const Navbar = () => {
           <div className="rounded-full flex">
             {user ? (
               <div className="flex items-center">
-                <div className="flex flex-col px-4">{user.displayName}
+               
+                <div className="tooltip" data-tip={user.displayName}> <img className="rounded-full w-8 h-8" src={user?.photoURL} /></div>
+                <div className="flex flex-col px-4">
                 <button onClick={() => logOut()}>Log Out</button></div>
-                <div> <img className="rounded-full w-8 h-8" src={user.photoURL} /></div>
               </div>
             ) : (
               <div className="text-black font-medium flex">
@@ -94,7 +95,7 @@ const Navbar = () => {
               </div>
             )}
             
-            {/* <img alt="Tailwind CSS Navbar component" src={userpic} /> */}
+            
           </div>
         </div>
       </div>

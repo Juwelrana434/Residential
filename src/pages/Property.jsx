@@ -1,10 +1,11 @@
 
 import { Link } from "react-router-dom";
-// import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
-// import { useContext } from "react";
+import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
+import { useContext } from "react";
 const Property = ({property}) => {
 
-// const{user} = useContext(AuthContext)
+const{user} = useContext(AuthContext)
+// console.log(user)
 
     return (
         <div>
@@ -16,7 +17,11 @@ const Property = ({property}) => {
     <p className="p-4">Rent: {property.property.price}</p></div>
     <div className="card-actions justify-end ">
     
-    <div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div>
+    {user ? (<div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div>) : 
+    (<div className="w-full my-4 px-4"><Link to="/login"><button className="btn btn-primary w-full">View Details</button></Link></div>)
+    };
+    {/* <div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div> */}
+    
     
   
     {/* {
