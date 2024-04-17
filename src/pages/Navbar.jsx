@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdHome } from "react-icons/io";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
 
 const Navbar = () => {
+  useEffect(() => {
+    document.title = "Navbar";
+    })
   const { user, logOut } = useContext(AuthContext);
   console.log(user);
   const navlink = (
@@ -19,11 +22,15 @@ const Navbar = () => {
         <NavLink to="/upcoming">Up Coming</NavLink>
       </li>
       <li>
-        <NavLink to="/career">Update Profile </NavLink>
+        <NavLink to="/prof">Contract </NavLink>
       </li>
       {user && <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/profile">Update Profile </NavLink>
       </li>}
+      {user && <li className="flex">
+        <NavLink to="/about">About</NavLink>
+      </li>
+      }
     </>
   );
   return (

@@ -6,7 +6,8 @@ import Register from "../pages/Register";
 import PropertyDetails from "../pages/PropertyDetails";
 import Error from './../Error/Error';
 import About from "../About/About";
-// import Upcoming from "../pages/Upcoming";
+import Profile from "../pages/Profile";
+//  import Upcoming from "../pages/Upcoming";
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         //   element: <Upcoming></Upcoming>
   
         //   },
+        {
+           path:'/profile',
+           element: <Profile></Profile>
+  
+           },
        
       ]
     },

@@ -26,6 +26,9 @@ AOS.init();
 
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home";
+    })
   const [properties, setProperties] = useState([]);
   useEffect(() => {
     fetch("/estatesection.json")

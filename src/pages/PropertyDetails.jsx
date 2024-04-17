@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const PropertyDetails = () => {
+  useEffect(() => {
+    document.title = "Property Details";
+    })
   const [details, setDetails] = useState([]);
   const [estateDetails, setEstateDetails] = useState([]);
 

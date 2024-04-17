@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import Home12 from "../../src/assets/Home12.jpg";
 import Home13 from "../../src/assets/Home13.jpg";
 import Home14 from "../../src/assets/Home14.jpg";
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About";
+    })
   return (
     <div>
     <div><h1 className="lg:text-[60px] text-white font-bold bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% my-6 rounded-lg">

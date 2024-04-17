@@ -1,8 +1,11 @@
 
 import { Link } from "react-router-dom";
 import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 const Property = ({property}) => {
+  useEffect(() => {
+    document.title = "Home -House of peace";
+    })
 
 const{user} = useContext(AuthContext)
 // console.log(user)
@@ -19,7 +22,7 @@ const{user} = useContext(AuthContext)
     
     {user ? (<div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div>) : 
     (<div className="w-full my-4 px-4"><Link to="/login"><button className="btn btn-primary w-full">View Details</button></Link></div>)
-    };
+    }
     {/* <div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div> */}
     
     

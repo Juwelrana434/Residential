@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
 // react hook
 import { useForm } from "react-hook-form";
 
 const Register = () => {
+  useEffect(() => {
+    document.title = "Register";
+    })
   const { registerUser, setUser } = useContext(AuthContext);
   const [error, setError] = useState("");
+  // show password 
+  const [showPassWord, setShowPassWord]= useState(false);
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -102,25 +108,35 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
+                <span onClick={ () => setShowPassWord(!showPassWord)} className="absolute top-[50px] right-12">
+                { 
+                 showPassWord ? <FaRegEye /> :<FaRegEyeSlash />
+                 
+                 }</span>
               </label>
               <input
                 name="password"
-                type="password"
+                type={ showPassWord ? "text" :"password"}
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Confirm Password</span>
+                <span onClick={ () => setShowPassWord(!showPassWord)} className="absolute top-[50px] right-12">
+                { 
+                 showPassWord ? <FaRegEye /> :<FaRegEyeSlash />
+                 
+                 }</span>
               </label>
               <input
                 name="confirmpassword"
-                type="password"
+                type={ showPassWord ? "text" :"password"}
                 placeholder="confirmpassword"
                 className="input input-bordered"
                 required

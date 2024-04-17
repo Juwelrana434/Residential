@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
 import Home5 from "../../src/assets/Home5.jpg";
 
 
 const Login = () => {
+  useEffect(() => {
+    document.title = "Login";
+    })
 const {loginUser, googleLogin, setUser, gitHubLogin} = useContext(AuthContext)
   const handleLogin = (e) => {
     e.preventDefault()
@@ -43,6 +46,7 @@ const {loginUser, googleLogin, setUser, gitHubLogin} = useContext(AuthContext)
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
+            
           </label>
           <input name='password' type="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
