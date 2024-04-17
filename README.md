@@ -10,20 +10,20 @@ Currently, two official plugins are available:
 
 # Peace of House
 ## [ Hithub link](https://classroom.github.com/a/6JnxJTKO)
-## [Live link](https://classroom.github.com/)
+## [Live link](https://hilarious-parfait-20f6bb.netlify.app/)
 
-Website features: * Navbar Section
-                   * Banner Section
-                   *products Section
-                   *Property details section
-                   * Our Services Section
-                   * Upcoming Services Section
-                   *About us Section
+Website features: -Navbar Section
+                   - Banner Section
+                   -products Section
+                   -Property details section
+                   - Our Services Section
+                   - Upcoming Services Section
+                   -About us Section
                    
                    characteristics
-                   *Responsible web site
-                   * protected routs
-                   *
+                   -Responsible web site
+                   - protected routs
+                   
                    
                    
                    
