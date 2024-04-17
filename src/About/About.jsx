@@ -9,7 +9,7 @@ const About = () => {
     })
   return (
     <div>
-    <div><h1 className="lg:text-[60px] text-white font-bold bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% my-6 rounded-lg">
+    <div><h1 className="lg:text-[60px] text-white font-bold bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% my-6 rounded-lg animate__animated animate__bounce animate__repeat-2">
           Welcome To House Of Peace <br />
           Residential Complex
         </h1></div> 

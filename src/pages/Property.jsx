@@ -20,9 +20,12 @@ const{user} = useContext(AuthContext)
     <p className="p-4">Rent: {property.property.price}</p></div>
     <div className="card-actions justify-end ">
     
-    {user ? (<div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div>) : 
+    <div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div>
+    
+    
+    {/* {user ? (<div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div>) : 
     (<div className="w-full my-4 px-4"><Link to="/login"><button className="btn btn-primary w-full">View Details</button></Link></div>)
-    }
+    } */}
     {/* <div className="w-full my-4 px-4"><Link to={`/property/${property.property.id}`}><button className="btn btn-primary w-full">View Details</button></Link></div> */}
     
     

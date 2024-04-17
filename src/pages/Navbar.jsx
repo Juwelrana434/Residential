@@ -29,7 +29,7 @@ const Navbar = () => {
       </li> : <li>
         <NavLink to="/login">About </NavLink>
       </li>}
-      {user && <li className="flex">
+      {user && <li>
         <NavLink to="/about">About</NavLink>
       </li>
       }

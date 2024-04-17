@@ -1,16 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../FirebaseAuthProvider/FirebaseProvider";
 import Home5 from "../../src/assets/Home5.jpg";
+import { FaRegEyeSlash, FaRegEye } from "react-icons/fa6";
 
 
 const Login = () => {
+  const location = useLocation()
+  const navigate = useNavigate()
+  console.log(location)
   useEffect(() => {
     document.title = "Login";
     })
-const {loginUser, googleLogin, setUser, gitHubLogin} = useContext(AuthContext)
+const {loginUser, googleLogin, setUser, gitHubLogin, user} = useContext(AuthContext)
   const handleLogin = (e) => {
     e.preventDefault()
     const email = e.target.email.value
@@ -26,6 +30,13 @@ const {loginUser, googleLogin, setUser, gitHubLogin} = useContext(AuthContext)
     gitHubLogin()
     .then(result => setUser(result.user))
     }
+    useEffect(() =>{
+    if(user){
+      navigate(location.state)
+    }
+    },[user])
+    // show/hide password confirmation
+    const [showPasWord, setShowPasWord]= useState(false);
     
     return (
     <div className="" style={{backgroundImage: `url(${Home5})`}}>
@@ -43,12 +54,16 @@ const {loginUser, googleLogin, setUser, gitHubLogin} = useContext(AuthContext)
           </label>
           <input name='email' type="email" placeholder="email" className="input input-bordered" required />
         </div>
-        <div className="form-control">
+        <div className="form-control relative">
           <label className="label">
             <span className="label-text">Password</span>
-            
+            <span onClick={ () => setShowPasWord(!showPasWord)} className="absolute top-[50px] right-12">
+                { 
+                 showPasWord ? <FaRegEye /> :<FaRegEyeSlash />
+                 
+                 }</span>
           </label>
-          <input name='password' type="password" placeholder="password" className="input input-bordered" required />
+          <input name='password' type={ showPasWord ? "text" :"password"} placeholder="password" className="input input-bordered" required />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
