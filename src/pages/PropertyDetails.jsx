@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const PropertyDetails = () => {
+const location = useLocation()
+console.log(location)
   useEffect(() => {
     document.title = "Property Details";
     })

@@ -24,8 +24,10 @@ const Navbar = () => {
       <li>
         <NavLink to="/prof">Contract </NavLink>
       </li>
-      {user && <li>
+      {user ? <li>
         <NavLink to="/profile">Update Profile </NavLink>
+      </li> : <li>
+        <NavLink to="/login">About </NavLink>
       </li>}
       {user && <li className="flex">
         <NavLink to="/about">About</NavLink>
